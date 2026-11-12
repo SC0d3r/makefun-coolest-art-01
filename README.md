@@ -1,13 +1,11 @@
-# Coolest Art Entry
+Coolest art entry for make.fun.
 
-`main.py` copies the entry image beside it (`entry.png`) into the harness output
-directory, which is `/output` inside the grader's container or the directory named
-by `MAKEFUN_OUTPUT_DIR` anywhere else.
+`main.py` finds `entry.png` beside itself, copies it byte for byte into the
+directory given by `MAKEFUN_OUTPUT_DIR` (default `/output`), creating that
+directory if needed, then prints the output path and the byte count.
 
 Run it locally:
 
-```sh
-MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
+    MAKEFUN_OUTPUT_DIR=out python3 main.py
 
-`entry.png` is the entry: the generated artwork the judges score.
+`entry.png` is the entry itself, and `out/entry.png` will be an exact copy of it.
